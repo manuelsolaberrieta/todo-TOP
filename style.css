@@ -1,0 +1,222 @@
+:root {
+  --azul-oscuro: #7888d2;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,500;1,400&family=Satisfy&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 6fr;
+  min-height: 100vh;
+}
+main {
+  background-color: lightsteelblue;
+  border-right: 5px solid lightsteelblue;
+  border-top: 5px solid lightsteelblue;
+}
+header {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azul-oscuro);
+}
+h1 {
+  color: white;
+}
+.modal {
+  position: relative;
+  margin: auto;
+  max-width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px;
+  background-color: white;
+  padding: 2px;
+}
+.modal h3 {
+  flex-basis: 90%;
+  text-align: center;
+}
+textarea {
+  margin: 5px 0;
+  width: 80%;
+  height: 150px;
+}
+.modal-container {
+  padding-top: 200px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+nav {
+  background-color: lightsteelblue;
+}
+nav ul {
+  background-color: lightsteelblue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+nav ul li {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(0, 56, 0);
+  background-color: white;
+  border-radius: 50px;
+  border-right: 2px solid gray;
+  border-bottom: 2px solid gray;
+}
+.project-title {
+  padding: 5px 10px;
+  text-decoration: underline;
+}
+.open-close-modal,
+.create-modal,
+.project-title {
+  max-width: max-content;
+}
+.open-close-modal:hover,
+.create-modal:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transform: scale(1.003);
+  transform-origin: 50% 50%;
+  transition: all 0.2s ease-out;
+  border-radius: 50px;
+}
+.project-title:hover {
+  color: white;
+  cursor: pointer;
+}
+.create-modal,
+#project-titles {
+  padding: 5px;
+  margin: 0% 100%;
+}
+.todo-container {
+  margin: 5px 0px;
+  padding: 5px;
+  border: 2px solid gold;
+}
+.todo-container,
+.deployed-project-header {
+  position: relative;
+}
+.todo-container input {
+  position: absolute;
+  right: 10px;
+  bottom: 3px;
+}
+.todo-container p {
+  font-family: "Satisfy", cursive;
+  font-size: larger;
+}
+.todo-container,
+.deployed-project-header {
+  border-radius: 20px;
+}
+.todo-container:hover,
+.deployed-project-header:hover {
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.2);
+  transform: scale(1.003);
+  transform-origin: 50% 50%;
+  transition: all 0.2s ease-out;
+}
+.deployed-project-header {
+  border: 2px solid gold;
+}
+.deployed-project-header h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+.deployed-project-header p {
+  text-align: right;
+  margin-right: 10px;
+}
+.delete-item {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: red;
+  color: white;
+}
+.done {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+}
+.done,
+.delete-item {
+  padding: 1px 5px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.done:hover,
+.delete-item:hover {
+  color: black;
+  background-color: yellow;
+}
+#close-project-modal,
+#close-todo-modal {
+  color: red;
+  font-weight: bold;
+}
+.incomplete {
+  background-color: rgb(191, 131, 131);
+}
+.complete {
+  background-color: rgb(90, 188, 90);
+}
+.high {
+  color: greenyellow;
+  font-weight: bolder;
+}
+@media only screen and (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 5fr;
+  }
+  nav {
+    grid-row: 2/3;
+  }
+  nav ul {
+    justify-content: space-around;
+  }
+  main {
+    grid-row: 3/6;
+  }
+  .deployed-project-header {
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .done,
+  .delete-item {
+    font-size: 0.7rem;
+    opacity: 0.2;
+  }
+  .done:hover,
+  .delete-item:hover {
+    opacity: 1;
+  }
+}
