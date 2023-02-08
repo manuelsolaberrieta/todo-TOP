@@ -1,3 +1,3 @@
 # todo-TOP
 
-I'm trying, with each project, to have a more abstract and reusable code. Long way to go but on the right path.
+!Y el premio para quienes obviamente no tuvieron ayuda de sus papás es para....
