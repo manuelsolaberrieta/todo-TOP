@@ -59,7 +59,6 @@ function deployProject(title = "") {
     const projectContainer = document.createElement("div");
     const projectHeader = document.createElement("div");
     const projectTitle = document.createElement("h2");
-    const projectDate = document.createElement("p");
     const projectBody = document.createElement("div");
     const deleteP = document.createElement("button");
     const done = document.createElement("button");
@@ -80,10 +79,9 @@ function deployProject(title = "") {
       : projectHeader.classList.add("complete");
     projectContainer.id = currentProject.title;
     projectContainer.append(projectHeader, projectBody);
-    projectHeader.append(projectTitle, projectDate, deleteP, done);
+    projectHeader.append(projectTitle, deleteP, done);
     projectHeader.classList.add("deployed-project-header");
     projectTitle.textContent = currentProject.title;
-    projectDate.textContent = currentProject.dueDate;
     projectBody.classList.add("deployed-project-body");
     projectToDos.forEach((t) => {
       const todoContainer = document.createElement("div");

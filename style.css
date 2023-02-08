@@ -4,7 +4,6 @@
   padding: 0;
   font-family: "Montserrat Alternates", sans-serif;
 }
-/* hacer overflow en main y en projects */
 body {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -132,6 +131,7 @@ nav ul li {
 .deployed-project-container {
   padding: 0 20px;
   overflow-y: scroll;
+  min-height: 30vh;
   max-height: 70vh;
 }
 .todo-container,
@@ -151,10 +151,6 @@ nav ul li {
 .deployed-project-header h2 {
   text-align: center;
   text-decoration: underline;
-}
-.deployed-project-header p {
-  text-align: right;
-  margin-right: 10px;
 }
 .delete-item {
   position: absolute;

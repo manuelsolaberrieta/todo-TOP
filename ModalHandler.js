@@ -14,12 +14,10 @@ export default class ModalHandler {
   static getProjectInfo() {
     const pInfo = {
       title: "",
-      date: "",
     };
     const pData = Array.from(document.querySelectorAll(".p-data"));
     if (this.validate(pData)) {
       pInfo.title = pData[0].value;
-      pInfo.date = pData[1].value;
       return pInfo;
     } else {
       return false;
@@ -36,10 +34,10 @@ export default class ModalHandler {
     const tData = Array.from(document.querySelectorAll(".t-data"));
     if (this.validate(tData)) {
       tInfo.title = tData[0].value;
-      tInfo.description = tData[1].value;
-      tInfo.date = tData[2].value;
-      tInfo.priority = tData[3].value;
-      tInfo.parentProject = tData[4].value;
+      tInfo.description = document.getElementById("t-description").value || "-";
+      tInfo.date = tData[1].value;
+      tInfo.priority = tData[2].value;
+      tInfo.parentProject = tData[3].value;
       return tInfo;
     } else {
       return false;

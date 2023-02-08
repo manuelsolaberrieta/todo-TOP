@@ -1,7 +1,6 @@
 export default class Project {
-  constructor(title, dueDate) {
+  constructor(title) {
     this.title = title;
-    this.dueDate = dueDate;
     this.todos = [];
     this.completed = false;
   }

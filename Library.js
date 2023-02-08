@@ -22,7 +22,7 @@ export default class Library {
   }
   static createNewProject(projectData) {
     if (projectData) {
-      const proj = new Project(projectData.title, projectData.date);
+      const proj = new Project(projectData.title);
       projects.push(proj);
       return true;
     }

@@ -24,15 +24,6 @@ const projectModal = [
         textContent: "X",
       },
       {
-        tag: "INPUT",
-        attributes: {
-          type: "date",
-          id: "p-end",
-          class: "p-data",
-          name: "p-end",
-        },
-      },
-      {
         tag: "button",
         attributes: { class: "create-modal", id: "create-project" },
         textContent: "Create",
@@ -69,9 +60,9 @@ const todoModal = [
         tag: "TEXTAREA",
         attributes: {
           id: "t-description",
-          class: "t-data",
           name: "t-description",
           placeholder: "to-do description",
+          maxlength: "160",
         },
       },
       {
