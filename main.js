@@ -3,6 +3,7 @@ import ModalHandler from "./ModalHandler.js";
 import Library from "./Library.js";
 const projectModal = new Modal("Project").createUi();
 const todoModal = new Modal("Todo").createUi();
+//implementar localStorage, arreglar edición de fechas.
 function markComplete(container, item) {
   if (container.classList.contains("incomplete") && item.completed === false) {
     container.classList.toggle("incomplete");
@@ -36,7 +37,7 @@ function deleteToDo(project, todo) {
 }
 function deleteProject(project) {
   Library.getProjects().splice(Library.getProjects().indexOf(project), 1);
-  deployProject();
+  document.querySelector("main").replaceChildren();
   updateProjectTitleLists();
 }
 function editTodo(parentProject, todo, todoTagChild) {

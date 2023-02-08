@@ -4,12 +4,17 @@
   padding: 0;
   font-family: "Montserrat Alternates", sans-serif;
 }
+/* hacer overflow en main y en projects */
 body {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 6fr;
+  grid-template-rows: 1fr 6fr 0.5fr;
   min-height: 100vh;
   background-color: gray;
+}
+footer {
+  background-color: black;
+  grid-column: 1/3;
 }
 main {
   padding: 10px;
@@ -124,6 +129,11 @@ nav ul li {
   font-family: "Satisfy", cursive;
   font-size: larger;
 }
+.deployed-project-container {
+  padding: 0 20px;
+  overflow-y: scroll;
+  max-height: 70vh;
+}
 .todo-container,
 .deployed-project-header {
   border-radius: 20px;
@@ -189,7 +199,7 @@ nav ul li {
 @media only screen and (max-width: 768px) {
   body {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.5fr 2fr;
+    grid-template-rows: 0.5fr 0.5fr 3fr 0.1fr;
   }
   nav {
     grid-row: 2/3;
@@ -200,6 +210,13 @@ nav ul li {
   }
   main {
     grid-row-start: 3;
+  }
+  .projects {
+    max-height: 7vh;
+    overflow-y: scroll;
+  }
+  .deployed-project-container {
+    max-height: 45vh;
   }
   .deployed-project-header {
     min-height: 80px;
