@@ -1,3 +1,3 @@
 # todo-TOP
 
-Each project will have a more abstract and reusable code.
+I'm trying, with each project, to have a more abstract and reusable code. Long way to go but on the right path.
